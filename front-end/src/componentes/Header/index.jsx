@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import bannerImage from "/banner/1.png";
 import logo from "/logos/1.png";
+import { Icon } from '@iconify/react';
 import "./style.css";
 
 const ContainerPreMenu = styled.div`
@@ -27,15 +28,16 @@ const ContainerMenu = styled.div`
     }
 `
 
+const ContainerLogo = styled.div`
+    width: 10%;
+`
+
 const LogoMenu = styled.img`
     width: 70px;
 `
 
-const IconsMenu = styled.img`
-    width: 30px;
-    &:hover {
-        cursor: pointer;
-    }
+const ContainerNav = styled.nav`
+    width: 40%;
 `
 
 const OrganizerMenu = styled.ul`
@@ -52,9 +54,17 @@ const ItensOrganizer = styled.li`
     }
 `
 
+const ContainerIcons = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+`
+
 const InputSearch = styled.input`
     background: transparent;
-    padding: 8px 14px;
+    padding: 8px 10px;
+    width: 15em;
     font-size: 16px;
     color: #FFF;
     border: 0.5px solid #FFF;
@@ -62,7 +72,24 @@ const InputSearch = styled.input`
     &::placeholder {
         color: #FFF;
     }
+    &:focus {
+        outline: 0;
+        border-color: #815248;
+    }
 `
+const IconSearch = styled.img`
+    width: 30px;
+    position: relative;
+    right: 2.5em;
+`
+
+const IconsMenu = styled.img`
+    width: 30px;
+    &:hover {
+        cursor: pointer;
+    }
+`
+
 const ContainerBanner = styled.div`
     display: block;
 `
@@ -73,19 +100,10 @@ const Banner = styled.img`
     }
 `
 
-const ContainerLogo = styled.div`
-    width: 10%;
-`
-const ContainerNav = styled.nav`
-    width: 40%;
-`
 
-const ContainerIcons = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 20%;
-`
+
+
+
 
 
 const Header = () => {
@@ -100,16 +118,18 @@ const Header = () => {
                 </ContainerLogo>
                 <ContainerNav>
                     <OrganizerMenu>
-                        <ItensOrganizer>Item 1</ItensOrganizer>
-                        <ItensOrganizer>Item 2</ItensOrganizer>
-                        <ItensOrganizer>Item 3</ItensOrganizer>
-                        <ItensOrganizer>Item 4</ItensOrganizer>
-                        <ItensOrganizer>Item 5</ItensOrganizer>
-                        <ItensOrganizer>Item 6</ItensOrganizer>
+                        <ItensOrganizer>Camiseta</ItensOrganizer>
+                        <ItensOrganizer>Garrafa</ItensOrganizer>
+                        <ItensOrganizer>Caneca</ItensOrganizer>
+                        <ItensOrganizer>Azulejo</ItensOrganizer>
+                        <ItensOrganizer>Chaveiro</ItensOrganizer>
+                        <ItensOrganizer>Almofada</ItensOrganizer>
+                        <ItensOrganizer>MDF</ItensOrganizer>
                     </OrganizerMenu>
                 </ContainerNav>
                 <ContainerIcons>
                     <InputSearch type="text" placeholder="O que voce esta buscando?" />
+                    <IconSearch src="/icones/search.png" alt="lupa search" />
                     <IconsMenu src="/icones/usuario-white.png" />
                     <IconsMenu src="/icones/carrinho-white.png" />
                 </ContainerIcons>
@@ -122,3 +142,14 @@ const Header = () => {
 }
 
 export default Header;
+
+/*
+paleta de cores da pagina
+#815248
+#654c3b
+#e6c4a6
+#f3d6c0
+#000000
+#f2ddbe
+
+*/
